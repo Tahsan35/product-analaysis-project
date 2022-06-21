@@ -34,7 +34,9 @@ const Home = () => {
                                 </HomeReviews>)
                         }
                     </div>
-                <button onClick={routeChange}>See All Reviews</button>
+                <div className='text-center m-4 p-4'>
+                    <button onClick={routeChange} className='btn btn-primary'>See All Reviews</button>
+                </div>
             </div>
         </section>
     );
