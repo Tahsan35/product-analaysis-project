@@ -1,6 +1,15 @@
+import { useNavigate } from 'react-router-dom';
+import HomeReviews from '../HomeReviews/HomeReviews';
+import UseReviews from '../hooks/UseReviews';
 import Photo from '../Images/bag.jpg';
 const Home = () => {
+    const [review] = UseReviews();
+    let newReview = review.slice(0, 3);
+
+    let navigate = useNavigate();
     const routeChange = () => {
+        let path = '/reviews';
+        navigate(path);
     }
     return (
         <section className="header-container container ">
@@ -17,6 +26,14 @@ const Home = () => {
             </div>
             <div>
                 <h1 className='text-center'>Customers Reviews</h1>
+                    <div>
+                        {
+                            newReview.map(items=> <HomeReviews
+                                key={items.id}
+                                items={items}>
+                                </HomeReviews>)
+                        }
+                    </div>
                 <button onClick={routeChange}>See All Reviews</button>
             </div>
         </section>

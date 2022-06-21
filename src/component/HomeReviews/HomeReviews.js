@@ -1,5 +1,5 @@
 
-const Reviews = ({items}) => {
+const HomeReviews = ({items}) => {
     const { img, name, rating, review } = items;
     return (
         <div>
@@ -11,4 +11,4 @@ const Reviews = ({items}) => {
     );
 };
 
-export default Reviews;
+export default HomeReviews;
