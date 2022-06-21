@@ -1,5 +1,5 @@
+import UseReviews from '../hooks/UseReviews';
 import Reviews from '../Reviews/Reviews';
-import UseReviews from './../hooks/UseReviews.js';
 
 const Review = () => {
     const [review] = UseReviews();

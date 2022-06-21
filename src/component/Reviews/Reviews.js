@@ -1,6 +1,6 @@
 
-const Reviews = ({items}) => {
-    const { img, name, rating, review } = items;
+const Reviews = ({reviews}) => {
+    const { img, name, rating, review } = reviews;
     return (
         <div>
             <img src={img} alt="" />
